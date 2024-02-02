@@ -44,25 +44,13 @@ services:
     environment:
       POSTGRES_DB: app
       # You should definitely change the password in production
-      POSTGRES_PASSWORD: app
-      POSTGRES_USER: password
+      POSTGRES_PASSWORD: root
+      POSTGRES_USER: root
     volumes:
       - database_data:/var/lib/postgresql/data:rw
       # You may use a bind-mounted host directory instead, so that it is harder to accidentally remove the volume and lose all your data!
       # - ./docker/db/data:/var/lib/postgresql/data:rw
 ###< doctrine/doctrine-bundle ###
-  phpmyadmin:
-    image: phpmyadmin/phpmyadmin
-    container_name: pma
-    links:
-      - database
-    environment:
-      PMA_HOST: database
-      PMA_PORT: 5432
-      PMA_ARBITRARY: 1
-    restart: always
-    ports:
-      - 8081:80
 volumes:
   caddy_data:
   caddy_config:
