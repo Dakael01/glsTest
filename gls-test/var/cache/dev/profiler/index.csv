@@ -1,0 +1,6 @@
+538528,127.0.0.1,GET,http://127.0.0.1:8000/,1706882963,,404,request
+3cbf8c,127.0.0.1,GET,http://localhost:8000/,1706883360,,404,request
+2a5bc4,127.0.0.1,GET,http://localhost:8000/libri/lista,1706883367,,200,request
+1415bc,::1,GET,http://localhost:8000/favicon.ico,1706883367,695442,404,request
+695442,::1,GET,http://localhost:8000/favicon.ico,1706883367,,404,request
+0d015e,127.0.0.1,GET,http://localhost:8000/libri/lista,1706883377,,200,request
