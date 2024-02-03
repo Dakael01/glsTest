@@ -1,0 +1,7 @@
+{
+    "require": {
+        "timiki/rpc-server-bundle": "^6.0",
+        "symfony/http-client": "^7.0",
+        "symfony/serializer-pack": "^1.3"
+    }
+}

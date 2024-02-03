@@ -1,0 +1,9 @@
+.idea
+bin/
+vendor/
+composer.phar
+composer.lock
+phpunit.phar
+dev/var/
+.php-cs-fixer.cache
+.phpunit.result.cache

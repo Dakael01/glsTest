@@ -6,8 +6,7 @@ use App\Repository\LibroRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: LibroRepository::class)]
-class Libro
-{
+class Libro{
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]

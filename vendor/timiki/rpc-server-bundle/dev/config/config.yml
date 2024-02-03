@@ -1,0 +1,27 @@
+imports:
+- { resource: services.yml }
+
+framework:
+    secret: test
+    router:
+        resource: '%kernel.project_dir%/dev/config/routing.yml'
+    session:
+        handler_id: ~
+    validation:
+        enabled: true
+    cache:
+        pools:
+            rpc.server.cache:
+                adapter: cache.adapter.array
+
+rpc_server:
+    mapping:
+        v1:
+        - '%kernel.project_dir%/tests/Method/V1'
+        v2:
+        - '%kernel.project_dir%/tests/Method/V2'
+    cache: rpc.server.cache
+    serializer: null
+    parameters:
+        allow_extra_params: false
+

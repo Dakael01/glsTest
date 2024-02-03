@@ -1,0 +1,33 @@
+{
+    "name": "timiki/rpc-common",
+    "type": "library",
+    "keywords": [
+        "rpc",
+        "json-rpc"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Netesin N",
+            "email": "nikita@netesin.ru"
+        }
+    ],
+    "require": {
+        "php": ">=8"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.0|^3.0",
+        "phpstan/phpstan": "^1.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "Timiki\\RpcCommon\\": "src/"
+        }
+    },
+    "config": {
+        "bin-dir": "bin",
+        "allow-plugins": {
+            "ocramius/package-versions": true
+        }
+    }
+}

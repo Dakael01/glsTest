@@ -16,6 +16,13 @@ class OilController extends AbstractController{
 
     #[Route('/oil/storico',name: 'oil_storico')]
     public function storico(): Response{
+        $storico= $this->catalogoOlio->getPrezziOlioList();
+        $final_html= $this->catalogoOlio->printData($storico);
+        return new Response($final_html);
+    }
+
+    #[Route('/oil/storico-json',name: 'oil_storico_json')]
+    public function storicoJson(): Response{
         $storico= $this->catalogoOlio->getStoricoOlio();
         $final_html= $this->catalogoOlio->printJson($storico);
         return new Response($final_html);

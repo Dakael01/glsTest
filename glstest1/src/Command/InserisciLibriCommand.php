@@ -16,8 +16,8 @@ class InserisciLibriCommand extends Command{
 
     protected $entityManager;
     protected $catalogoLibri;
-    public function __construct(EntityManagerInterface $entityManager){
-        $this->catalogoLibri = new CatalogoLibri($entityManager);
+    public function __construct(EntityManagerInterface $entityManager, CatalogoLibri $catalogoLibri){
+        $this->catalogoLibri = $catalogoLibri;
         $this->entityManager = $entityManager;
         parent::__construct();
     }
