@@ -168,3 +168,8 @@ Così facendo si può schedulare ogni tot l'update delle informazioni del db.
 Anche per questo caso non ho utilizzato twig, repository o collection. Ho utilizzato solo le classi entity, controller,command e una classe di supporto.
 All'interno del db ho preferito tenere le date in formato stringa per semplicità, e anche per poterle stampare a schermo senza dover fare conversioni.
 
+
+
+### Note finali
+all'interno del progetto è presente anche docker. Per avviare il progetto dovrebbe bastare il comando "docker-compose up -d". Ammetto però che per farlo girare in locale ho dovuto lottare un pochino in quanto il db non si connetteva con il resto dell'env quindi non è detto che funzioni correttamente.
+nel caso in cui riusciste a farlo partire, sono necessari i comandi di docker per le migrazioni e per popolare il db con i dati del json. per le migrazioni vanno usati i comandi normali di symfony, mentre per popolare il db con i dati dei comandi descritti precedentemente.
