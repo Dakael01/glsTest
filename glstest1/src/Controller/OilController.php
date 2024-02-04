@@ -35,13 +35,11 @@ class OilController extends AbstractController{
             $startDate = $requestData['params']['startDateISO8601'];
             $endDate = $requestData['params']['endDateISO8601'];
             $prices = $this->catalogoOlio->getOilPrices($startDate, $endDate);
-
             $response = [
                 'jsonrpc' => '2.0',
                 'id' => $requestData['id'],
                 'result' => ['prices' => $prices]
             ];
-
             return new JsonResponse($response);
         }
         return new JsonResponse(['error' => 'Method not found'], JsonResponse::HTTP_NOT_FOUND);

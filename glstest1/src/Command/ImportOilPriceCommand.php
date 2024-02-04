@@ -47,8 +47,8 @@ class ImportOilPriceCommand extends Command
             $output->writeln('Nessun nuovo dato da inserire');
             return Command::SUCCESS;
         }
-        /// inserimento dei dati in batch da 200
-        $batchSize = 200;
+        /// inserimento dei dati in batch da 1000
+        $batchSize = 1000;
         $count = 0;
         $lastItem = end($itemsToInsert);
         $count_items = 0;

@@ -60,10 +60,9 @@ class OilHelper{
                 continue;
             }
             $itemsToInsert[] = ['data' => $item_date, 'prezzo' => $value["Brent Spot Price"]];
-
         }
         /// inserimento dei dati in batch da 200
-        $batchSize = 200;
+        $batchSize = 1000;
         $count = 0;
         foreach ($itemsToInsert as $item) {
             $prezzo_olio = new PrezziOlio();
@@ -137,7 +136,6 @@ class OilHelper{
 
 
     public function printData($item_list):string{
-
         $final_html= '<div><h1>LISTA JSON</h1>
             <style>
             .lista-olio {
